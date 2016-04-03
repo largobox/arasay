@@ -31,7 +31,8 @@ set :log_level, :info
 # set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w(bin log tmp/cache vendor/bundle public/system)
+set :linked_dirs, %w(log tmp/cache vendor/bundle public/system)
+set :bundle_binstubs, nil
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
