@@ -1,0 +1,34 @@
+<h2>Регистрация</h2>
+
+<div class = 'devise_custom_cont'>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class = 'devise_custom_field'>
+      <%= f.label 'Электронная почта' %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class = 'devise_custom_field'>
+      <%= f.label 'Пароль' %>
+      <% if @minimum_password_length %>
+      <em>(минимальное количество символов - <%= @minimum_password_length %>)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class = 'devise_custom_field'>
+      <%= f.label 'Подтверждение пароля' %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <div class = 'devise_custom_btn'>
+      <%= f.button :button do %>
+        Отправить
+      <% end %>
+    </div>
+
+  <% end %>
+
+  <%= render "users/shared/links" %>
+</div>

@@ -1,0 +1,30 @@
+<h2><%= @article_title %></h2>
+
+<div class = 'return_link'>
+  <%= link_to "К тексту статьи", article_path(params[:article_id]) %>
+</div>
+
+<div class = 'parent_comments_cont'>
+	<% @comments.each do |c| %>
+	  <%= render partial: 'comment', locals: {c: c[0]} %>
+	    <div class = 'sub_comment_cont' >
+				<% c[1].each do |sub_c| %>
+				  <%= render partial: 'comment', locals: {c: sub_c, sub_cmnt_lvl: 2} %>
+				<% end %>
+	    </div>
+	<% end %>
+
+<% if current_user.nil? %>
+  <div class = 'comment_add_notice'>
+    Для того, чтобы оставить комментарий необходимо <%= link_to 'Авторизоваться', new_user_session_path %>
+  </div>
+<% else %>
+	<div class = 'add_comment_form'>
+	  <%= render template: 'shiny_comments/new' %>
+	</div>
+<% end %>
+
+</div>
+<%= render template: 'users/sessions/new_custom' %>
+
+

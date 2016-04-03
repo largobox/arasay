@@ -1,0 +1,27 @@
+<div class = 'profile_header'>
+  <h2>Профиль</h2>
+
+	<div class = 'profile_link'>
+    <%= link_to 'Редактировать', edit_profile_path %>
+	</div>
+	<div class = 'profile_link'>
+    <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+	</div>
+
+</div>
+
+<div class = 'profile_container'>
+	  <%= image_tag current_user.profile_pic.url(:small) %>
+	<div>
+	  Электронная почта : <%= @user.email %>
+	</div>
+	<div>
+    Никнейм : <%= @user.nick_name %>
+	</div>
+	<div>
+    Лайки : <%= @user.likes_counter %>
+	</div>
+	<div>
+    Комментарии : <%= @user.comments_counter %>
+	</div>
+</div>

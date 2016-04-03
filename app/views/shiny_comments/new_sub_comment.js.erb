@@ -1,0 +1,14 @@
+arr = $('.add_sub_comment_link');
+result = $.grep(arr, function(e){ return e.getAttribute('data-parent_comment_id') == '<%= @parent_comment_id %>'; });
+
+$(result).hide().after("<%= j render(partial: 'new_sub_comment') %>");
+
+$(document).ready(function() {
+  $('.sub_comment_close_mark').click(function(){
+    $(this).parents('.add_sub_cmnt_cont').hide();
+    add_link_id = $(this).parents('.add_sub_cmnt_cont')[0].getAttribute('id') 
+    console.log(add_link_id);
+    res = $.grep(arr, function(e){ return e.getAttribute('data-parent_comment_id') == add_link_id; });
+    $(res).show();
+  });
+});

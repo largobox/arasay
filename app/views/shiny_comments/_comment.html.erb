@@ -1,0 +1,66 @@
+<div class = 'comment_cont'>
+  <div class = 'l_comment_block'>
+	  <div class = 'author_pic'>
+	  </div>
+  </div>
+  <div class = 'r_comment_block'>
+	  <div class = 'additional_inf'>
+	  	<div class = 'nickname'>
+	  	  <%= c.user.nick_name %> 
+	  	</div>
+	  	<div class = 'added_date'>
+	  	  <%= c.created_at.strftime('%F') %>  
+	  	</div>
+
+	  	<div class = 'likes_cont'>
+	  		<% if  current_user.nil?  %>
+	  			<div class = 'like_dislike_comment call_popup'>
+				  	<span>–</span>
+		  		</div>
+		  	<% elsif not @user_comments_id.include? c.id %>
+		  		<div class = 'like_dislike_comment'>
+				  	<%= link_to '–', comment_dislike_path(c.id), method: :post %>
+		  		</div>
+		  	<% else %>
+		 			<div class = 'like_dislike_comment call_popup'>
+		  		</div>
+	  		<% end %>
+
+	  		<% if c.likes < 0 %>
+	  		  <div class = 'negative_likes'>
+	  		    <%= c.likes %>
+	  		  </div>
+	  		<% else %>
+	  		  <div class = 'positive_likes'>
+	  		    <%= c.likes %>
+	  		  </div>
+	  		<% end %>
+
+	  		<% if  current_user.nil?  %>
+	  			<div class = 'like_dislike_comment call_popup'>
+				  	<span>+</span>
+		  		</div>
+		  	<% elsif not @user_comments_id.include? c.id %>
+		  		<div class = 'like_dislike_comment'>
+				  	<%= link_to '+', comment_like_path(c.id), method: :post %>
+		  		</div>
+		  	<% else %>
+		 			<div class = 'like_dislike_comment call_popup'>
+		  		</div>	
+	  		<% end %>
+	  	</div>
+
+	  </div>
+	  <div class = 'comment_body'>
+	  	<%= c.body %>
+	  	<!-- временное решение проблему подкомментариев -->
+	  	<% if c.comment_id.nil? %> 
+	  	  <% if current_user %>
+	  		  <span class = 'add_sub_comment_link' data-parent_comment_id = '<%= c.id %>' >Ответить</span>
+	  		<% else %>
+	  		  <span class = 'for_login_add_sub_comment_link' data-parent_comment_id = '<%= c.id %>' >Ответить</span>
+	  	  <% end %>
+  	  <% end %>
+	  </div>	
+  </div>
+</div>

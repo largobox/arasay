@@ -1,0 +1,15 @@
+<div class = 'article_cont'>
+	<h2><%= @article.title %></h2>
+
+	<%= raw ERB.new(@article.body).result(binding) %>
+</div>
+
+<div class = 'article_additional_info'>
+	<%= link_to "Посмотреть комментарии (#{@article.comment_counter})", shiny_comments_path(article_id: @article.id) %>
+	<div class = 'article_inf_elem'>
+	  Просмотров: <%= @article.view_counter %>
+	</div>
+	<div class = 'article_inf_elem'>
+	  Обновлён: <%= @article.updated_at.strftime('%F') %>
+	</div>
+</div>

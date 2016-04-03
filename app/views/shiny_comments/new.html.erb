@@ -1,0 +1,10 @@
+<%= form_for @comment do |f| %>
+  <%= f.text_area :body %>
+  <%= f.hidden_field :article_id, value: params[:article_id] %>
+  <div class = ''>
+	  <%= f.button :button do %>
+	   Написать комментарий
+	  <% end %>
+  </div>
+
+<% end %>

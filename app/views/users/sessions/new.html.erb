@@ -1,0 +1,32 @@
+<h2>Для авторизации заполните форму</h2>
+
+<div class = 'devise_custom_cont'>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class='devise_custom_field'>
+      <%= f.label 'Электронная почта' %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class='devise_custom_fiel'>
+      <%= f.label 'Пароль' %><br />
+      <%= f.password_field :password, autocomplete: 'off' %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class='devise_custom_field'>
+        <%= f.check_box :remember_me %>
+        <%= f.label 'Запомнить меня' %>
+      </div>
+    <% end -%>
+
+    <div class = 'devise_custom_btn devise_custom_mrg_left'>
+      <%= f.button :button do %>
+        Войти
+      <% end %>
+    </div>
+  <% end %>
+
+    <%= render 'users/shared/links' %>
+    
+</div>

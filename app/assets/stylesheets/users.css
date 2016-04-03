@@ -1,0 +1,51 @@
+.profile_container {
+	font-size: 16px;
+	width: 445px;
+}
+
+.profile_field {
+	margin-bottom: 10px;
+}
+
+.profile_link {
+  background: #61267E;
+	border-radius: 12px;
+	color: #fff;
+	display: inline-block;
+  font-size: 16px;
+	height: 30px;
+	margin-left: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 2px; 
+}
+
+.profile_link:hover {
+	background: #985EB5;
+}
+
+.profile_link a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.profile_header h2{
+	display: inline-block;
+	margin-right: 330px;
+}
+
+.profile_custom_btn [type=submit] {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	height: 30px;
+	width: 120px;
+	border-radius: 12px;
+  background: #61267E;
+  margin-top: 10px;
+  margin-left: 235px;
+}
+
+.profile_custom_btn [type=submit]:not(.disabled):hover  {
+  background: #985EB5;
+}

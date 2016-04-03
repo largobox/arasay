@@ -1,0 +1,28 @@
+<h2>Редактирование профиля</h2>
+
+<div class = 'profile_container'>
+	<div class = 'devise-custom-container'>
+		<%= form_for @user, url: update_profile_path, html: { multipart: true } do |form| %>
+		  <div class = 'profile_field'>
+		  	<div class = 'profile_field_label'>Электронная почта</div>
+	      <%= form.text_field :email %>
+		  </div>
+	    <div class = 'profile_field'>
+	    	<div class = 'profile_field_label'>Никнейм</div>
+	      <%= form.text_field :nick_name %>
+		  </div>
+	    <div class = 'profile_field'>
+	    	<div class = 'profile_field_label'>Аватар</div>
+	      <%= form.file_field :profile_pic, as: :file %>
+		  </div>
+
+	    <div class = 'profile_custom_btn'>
+	      <%= form.submit 'Сохранить' do %>
+	        Сохранить
+	      <% end %>
+	    </div>
+
+	  <% end %>
+	</div>
+</div>
+	

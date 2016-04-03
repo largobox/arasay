@@ -1,0 +1,13 @@
+  <div class = 'add_sub_cmnt_cont' id = '<%= @parent_comment_id %>'>
+	  <div class = 'sub_comment_close_mark'>
+	  </div>	
+		<%= form_for @comment, url: create_sub_comment_path do |f| %>
+		  <%= f.text_area :body %>
+		  <%= f.hidden_field :comment_id, value: @parent_comment_id %>
+		  <div class = 'shiny_comments_btn'>
+			  <%= f.button :button do %>
+			    Ответить
+			  <% end %>
+		  </div>
+		<% end %>
+  </div>

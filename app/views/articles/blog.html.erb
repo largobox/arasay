@@ -1,0 +1,29 @@
+<div>
+	<% @articles.each do |a| %>
+		<div class = 'article_block'>
+	    <%= link_to article_path(a.id) do %>
+				<div class = 'article_pic'>
+				  <%= image_tag a.article_pic.url(:normal) %>
+				</div>
+	    <% end %>
+			<div class = 'article_title'>
+			  <%= a.title %>
+			</div>
+			<div class = 'article_preview'>
+				  <%= a.preview %>
+				<div class = 'comment_and_view_pic'>
+					<%= image_tag 'comment.png' %>
+			    <%= a.comment_counter %>
+				</div>
+			  <div class = 'comment_and_view_pic'>
+					<%= image_tag 'view.png' %>	
+				  <%= a.view_counter %>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<div class = 'paginate_cont'>
+  <%= paginate @articles, :window => 2 %>
+</div>

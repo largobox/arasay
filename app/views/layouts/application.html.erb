@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arasay</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class = 'top_cont'>
+  </div>
+
+  <div class = 'menu_cont'>
+    <%= image_tag 'logo.png' %>
+  </div>
+
+  <div class = 'mid_cont'>
+
+  	<div class = 'content_cont'>
+	    <%= yield %>
+  	</div>
+
+  	<div class = 'right_side_cont'>
+      <div class = 'parent_login_cont'>
+        <div class = 'login_cont'>
+          <%= link_to 'Войти', new_user_session_path  %>
+          <%= link_to 'Зарегистрироваться', new_user_registration_path  %>
+        </div>
+      </div> 
+      <div class = 'right_banner'></div>
+  	</div>
+  </div>
+
+  <div class = 'bot_cont'>
+    <%= link_to 'О проекте', about_path %>
+    <%= link_to 'Контакты', contacts_path %>    
+  </div>
+
+</body>
+</html>
