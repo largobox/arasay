@@ -13,9 +13,9 @@ development:
 
 production:
   <<: *default
-  database: largobox_shiny58
+  database: largobox_arasa49
   encoding: utf8
-  username: largobox_shiny58
-  password: 7wmXwPCHz
+  username: largobox_arasa49
+  password: naB1uFGbVfh
   host: postgresql0.locum.ru
   port: 5432
