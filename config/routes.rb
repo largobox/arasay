@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   root 'articles#blog'
 
   get 'blog',          to: 'articles#blog'
-  get 'basics',        to: 'articles#basics'
-  get 'guides',        to: 'articles#guides'
   get '/articles/:id', to: 'articles#show', as: 'article'
 
   get 'contacts', to: 'application#contacts'
