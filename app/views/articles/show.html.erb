@@ -1,6 +1,8 @@
 <div class = 'article_cont'>
 	<h2><%= @article.title %></h2>
-
+  <div class = 'article_back_link'>
+	  <%= link_to 'Вернуться', :back %>
+  </div>
 	<%= raw ERB.new(@article.body).result(binding) %>
 </div>
 
@@ -10,6 +12,6 @@
 	  Просмотров: <%= @article.view_counter %>
 	</div>
 	<div class = 'article_inf_elem'>
-	  Обновлён: <%= @article.updated_at.strftime('%F') %>
+	  Дата публикации: <%= @article.updated_at.strftime('%F') %>
 	</div>
 </div>

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Arasay</title>
+  <%= favicon_link_tag 'icon.png' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,10 +13,14 @@
   </div>
 
   <div class = 'menu_cont'>
-    <%= image_tag 'logo.png' %>
+    <%= link_to root_path do %>
+      <%= image_tag 'logo.png' %>
+    <% end %>
   </div>
 
   <div class = 'mid_cont'>
+    <div class = 'start_divider'>
+    </div>
 
   	<div class = 'content_cont'>
 	    <%= yield %>
