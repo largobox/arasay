@@ -122,6 +122,18 @@ body {
 	/*border-radius: 12px;*/
 }
 
+.footer_text_block {
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.footer_ps {
+	float: right;
+	margin-top: 40px;
+  width: 355px; 
+	font-size: 14px;
+}
+
 /* Devise */
 
 .devise_custom_cont {
