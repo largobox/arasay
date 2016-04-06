@@ -152,7 +152,12 @@ body {
 	height: 30px;
 	width: 120px;
 	border-radius: 12px;
-  background: #61267E;
+  background: #6B4D42;
+}
+
+.devise_top_margin {
+	margin-top: 16px;
+
 }
 
 .devise_custom_mrg_left {
@@ -160,5 +165,5 @@ body {
 }
 
 .devise_custom_btn button:not(.disabled):hover {
-	background: #985EB5;
+	background: #A87663;
 }

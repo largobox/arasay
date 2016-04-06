@@ -1,7 +1,7 @@
 <%= form_for @comment do |f| %>
   <%= f.text_area :body %>
   <%= f.hidden_field :article_id, value: params[:article_id] %>
-  <div class = ''>
+  <div class = 'shiny_comments_big_btn'>
 	  <%= f.button :button do %>
 	   Написать комментарий
 	  <% end %>

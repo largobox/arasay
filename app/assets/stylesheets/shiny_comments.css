@@ -172,13 +172,13 @@
 	font-weight: normal;
 	height: 40px;
 	border-radius: 12px;
-  background: #61267E;
+  background: #6B4D42;
   margin-right: 15px;
   margin-top: 6px;
 }
 
 .add_comment_form [type=submit]:not(.disabled):hover  {
-  background: #985EB5;
+  background: #A87663;
 }
 
 .comment_add_notice {
@@ -221,6 +221,10 @@
 	float: right;
 }
 
+.shiny_comments_big_btn {
+	margin-right: -7px;
+}
+
 #shiny_comment_body {
 	width: 96%;
   min-height: 80px;
@@ -229,15 +233,16 @@
 
 .shiny_comments_btn button {
 	border-radius: 12px;
-  background: #61267E;
+  background: #6B4D42;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 18px;
 	font-weight: normal;
 	height: 30px;
+	margin-top: 3px;
 }
 
 .shiny_comments_btn button:not(.disabled):hover {
-	background: #985EB5;
+	background: #A87663;
 }
 
 .sub_comment_close_mark {
@@ -246,6 +251,7 @@
 	height: 32px;
 	margin-right: 3px;
 	float: right;
+	cursor: pointer;
 }
 
 .sub_comment_cont {
