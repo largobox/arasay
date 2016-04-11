@@ -1,13 +1,13 @@
 <div class = 'article_cont'>
 	<h2><%= @article.title %></h2>
   <div class = 'article_back_link'>
-	  <%= link_to 'Вернуться', :back %>
+	  <%= link_to 'Вернуться', blog_path %>
   </div>
 	<%= raw ERB.new(@article.body).result(binding) %>
 </div>
 
 <div class = 'article_additional_info'>
-	<%= link_to "Посмотреть комментарии (#{@article.comment_counter})", shiny_comments_path(article_id: @article.id) %>
+	<%= link_to "Посмотреть комментарии (#{@comment_count})", shiny_comments_path(article_id: @article.id) %>
 	<div class = 'article_inf_elem'>
 	  Просмотров: <%= @article.view_counter %>
 	</div>

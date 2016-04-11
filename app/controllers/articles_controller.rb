@@ -6,9 +6,10 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@comment_count = @article.shiny_comments.size
 
 	  if @article.nil?
-    	render text: 'Wow... Sorry us, but page not found', status: 404
+    	render text: 'Wow... Arasay apologize, but page not found', status: 404
     else
       add_view
     end
