@@ -50,6 +50,12 @@
 	margin-bottom: 26px;
 }
 
+.article_ps {
+	/*text-align: right;*/
+	width: 300px;
+	margin-left: 390px;
+}
+
 .comment_and_view_pic {
 	display: inline-block;
 	font-size: 14px;
