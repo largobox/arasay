@@ -8,7 +8,7 @@ permit_params :title, :topic, :preview, :body, :ended, :article_pic, hero_ids: [
   form do |f|
 		inputs 'Details' do
 		  input :title
-		  input :topic, :as => :select, collection: ['Гайд на героя', 'Основы', 'Блог']
+		  input :topic, as: :select, collection: ['Гайд на героя', 'Основы', 'Блог']
 		  input :preview
 		  input :body
 		  input :ended

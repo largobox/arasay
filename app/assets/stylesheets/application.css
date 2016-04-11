@@ -116,6 +116,7 @@ body {
 }
 
 .right_banner {
+	display: none;
 	height: 360px;
 	width: 270px;
 	background: #6B4D42;
