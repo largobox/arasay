@@ -21,6 +21,8 @@
 }
 
 .article_title {
+	font-size: 20px;
+	margin-top: 8px;
 }
 
 .article_back_link {
@@ -35,8 +37,7 @@
 
 .article_preview {
 	margin-top: 8px;
-	margin-left: 5px;
-	font-size: 14px;
+	font-size: 16px;
   color: #5E5E5E; 
 }
 
