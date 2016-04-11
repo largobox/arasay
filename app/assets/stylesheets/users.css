@@ -8,7 +8,7 @@
 }
 
 .profile_link {
-  background: #61267E;
+  background: #6B4D42;
 	border-radius: 12px;
 	color: #fff;
 	display: inline-block;
@@ -21,7 +21,7 @@
 }
 
 .profile_link:hover {
-	background: #985EB5;
+	background: #A87663;
 }
 
 .profile_link a{
@@ -41,11 +41,11 @@
 	height: 30px;
 	width: 120px;
 	border-radius: 12px;
-  background: #61267E;
+  background: #6B4D42;
   margin-top: 10px;
   margin-left: 235px;
 }
 
 .profile_custom_btn [type=submit]:not(.disabled):hover  {
-  background: #985EB5;
+  background: #A87663;
 }

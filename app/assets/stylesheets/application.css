@@ -102,17 +102,24 @@ body {
 	height: 40px;
 	background: #A87663;
 	margin-bottom: 20px;
+	text-align: center;
 	/*border-radius: 12px;*/
 }
 
 .login_cont {
+	display: inline-block;
 	padding-top: 8px;
+}
+
+.login_cont_divide {
+	display: inline-block;
+	width: 20px;
+	height: 1px;
 }
 
 .login_cont a{
 	color: #fff;
 	font-size: 16px;
-	margin-left: 22px;
 }
 
 .right_banner {

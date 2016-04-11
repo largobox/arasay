@@ -29,8 +29,15 @@
   	<div class = 'right_side_cont'>
       <div class = 'parent_login_cont'>
         <div class = 'login_cont'>
-          <%= link_to 'Войти', new_user_session_path  %>
-          <%= link_to 'Зарегистрироваться', new_user_registration_path  %>
+          <% if current_user.nil? %>
+            <%= link_to 'Войти', new_user_session_path  %>
+            <div class = 'login_cont_divide'></div>
+            <%= link_to 'Зарегистрироваться', new_user_registration_path  %>
+          <% else %>
+            <%= link_to 'Профиль', profile_path  %>
+            <div class = 'login_cont_divide'></div>
+            <%= link_to 'Выйти', destroy_user_session_path, method: :delete  %>
+          <% end %>
         </div>
       </div> 
       <div class = 'right_banner'></div>

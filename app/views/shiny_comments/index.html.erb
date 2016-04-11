@@ -1,7 +1,8 @@
-<h2><%= @article_title %></h2>
-
-<div class = 'return_link'>
-  <%= link_to "К тексту статьи", article_path(params[:article_id]) %>
+<div class = 'comments_head'>
+	<h2><%= @article_title %></h2>
+	<div class = 'comments_back_link'>
+	  <%= link_to "К тексту статьи", article_path(params[:article_id]) %>
+	</div>
 </div>
 
 <div class = 'parent_comments_cont'>
